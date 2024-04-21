@@ -1,5 +1,4 @@
 ﻿using System;
-using TMPro;
 using UnityEngine;
 
 public abstract class BasicHealthManipulator : MonoBehaviour
@@ -13,15 +12,11 @@ public abstract class BasicHealthManipulator : MonoBehaviour
 
     public float Value => _value;
 
-    private void OnEnable()
-    {
+    private void OnEnable() =>
         _interactableButton.OnClick += OnClick;
-    }
 
-    private void OnDisable()
-    {
+    private void OnDisable() =>
         _interactableButton.OnClick += OnClick;
-    }
 
     public void SetValue(string value)
     {
